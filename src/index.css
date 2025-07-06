@@ -1,0 +1,124 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --border-color: rgba(255, 255, 255, 0.15);
+    --accent: #3b82f6;
+    --text: #f9fafb;
+    --subtle: #9ca3af;
+    --radius: 10px;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(145deg, #0d0f15, #11141c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 430px;
+    padding: 40px; 
+}
+
+.glass-card h1 {
+    font-size: 1.6rem;
+    color: var(--text);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form input {
+  width: 100%;
+  padding: 16px 100px 16px 16px; /* space on the right for button */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.form input::placeholder {
+  color: var(--subtle);
+}
+
+.form input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.form button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  height: 38px;
+  padding: 0 16px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form button:hover {
+  background: #2563eb;
+}
+
+.form button:disabled {
+  background: #4b5563;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+.form button img {
+    display: block;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    display: flex;
+    color: var(--text);
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
